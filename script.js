@@ -1,13 +1,13 @@
 const calculator = document.querySelector('.calculator');
 const keys = document.querySelector('.calculator__keys');
 const display = document.querySelector('.calculator__display');
-const operatorKey = document.querySelector('[data-type="operator"]');
+
 
 
 keys.addEventListener('click', event => {
   if (!event.target.closest('button')) return
 
-  // print the Key value in the display
+  // print the Keys values in the display
   const key = event.target
   const keyValue = key.textContent
   const displayValue = display.textContent
@@ -15,7 +15,7 @@ keys.addEventListener('click', event => {
   const { previousKeyType } = calculator.dataset
   display.textContent = keyValue
 
-  // print only numbers in the display
+  // print only numbers in the display and reset after calculation
   if (type === 'number') {
     if (displayValue === '0' || previousKeyType === 'operator' || previousKeyType === 'equal') {
       display.textContent = keyValue
@@ -50,14 +50,13 @@ keys.addEventListener('click', event => {
     delete calculator.dataset.secondNumber
   }
 
-  // 
+  // add a dot to the display value
   if (type === 'decimal') {
     if (!displayValue.includes('.')) {
       display.textContent = displayValue + '.'
     } else {
       display.textContent = displayValue
     }
-
   }
 
   calculator.dataset.previousKeyType = type
