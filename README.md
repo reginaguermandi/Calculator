@@ -1,6 +1,6 @@
 # Calculator - JS
 
-A calcutator who perfom simple calculations and has a clean design, this project allowed me practice javascript and improve logical thinking.
+A calculator who perform simple calculations and has a clean design, this project allowed me practice javascript and improve logical thinking.
 
 ### Screenshot
 
@@ -32,7 +32,7 @@ Then I make a step by step of the entire project without much details, this help
 ### Continued development
 
 - BEM pattern
-- code refactoring and restructuring 
+- code refactoring and destructuring 
 - improve logical thinking
 
 ### Useful resources
